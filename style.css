@@ -1,0 +1,184 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Glow */
+.background-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent);
+  z-index: -2;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #181818;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  width: 400px;
+}
+
+.profile-card.move-left {
+  transform: translateX(-200px);
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-link {
+  display: inline-flex;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  background: #9de3ff;
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  filter: invert(0);
+}
+
+/* Buttons */
+.buttons-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.tab-button {
+  background: #181818;
+  border: none;
+  color: #aaa;
+  padding: 15px 35px;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.tab-button.active {
+  background: #fff;
+  color: #111;
+  transform: scale(1.15);
+}
+
+/* Info Cards */
+.info-cards-container {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: -280px; /* Adjusted for upscale */
+  width: 400px;
+  height: auto;
+}
+
+.info-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #181818;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.info-card.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Specific Styling for Designing Card */
+#designing {
+  width: 450px; /* Larger width */
+}
+
+.designing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.designing-text {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.designing-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
